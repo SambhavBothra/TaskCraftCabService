@@ -1,2 +1,11 @@
 <h1>Hi buddy welcome to home#index</h1>
 
+<ul>
+	<% @cabs.each do |x| %> 
+		<li>
+			<%#= x.cab_id %>
+			<%= x.cab_no %>
+		</li>	
+	<% end %>
+</ul>	
+

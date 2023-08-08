@@ -1,11 +1,11 @@
-ActiveAdmin.register Customer do
+ActiveAdmin.register Driver do
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-   permit_params :email, :encrypted_password
+   permit_params :email, :encrypted_password, :status
   #
   # or
   #
@@ -14,5 +14,25 @@ ActiveAdmin.register Customer do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
+
+
+
+  form do |f|
+    f.inputs do
+      f.input :email
+      f.input :encrypted_password
+      f.input :status
+      # f.input :profile_photos, as: :file, input_html: {multiple: true}
+    end
+    f.actions
+  end
+
+  show do
+    attributes_table do
+      row :email
+      row :encrypted_password
+        
+    end
+  end            
   
 end

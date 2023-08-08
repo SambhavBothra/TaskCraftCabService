@@ -75,3 +75,4 @@ end
 gem 'devise'
 gem 'activeadmin'
 gem 'sassc'
+# gem 'ransack', github: 'activerecord-hackery/ransack'

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :drivers, controllers:{
+    registration: 'registration'
+  }
+  
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :customers
